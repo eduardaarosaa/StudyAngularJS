@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js"></script>
+	<script>
+
+		//criei um modulo
+		var aplication = angular.module('app',[]);
+
+		aplication.controller('app_controller',['$scope', function($scope){
+
+		let nome = 'Duda';
+
+		let idade = $scope.idade;
+
+		console.log(nome);
+
+
+
+		}]);
+
+	</script>
+</head>
+
+<body>
+	Nome:<input type="text" name="nome" ng-model="nome">
+	
+	Idade:<input type="text" name="idade" ng-model="idade">
+
+	<p>Meu nome é {{nome}}</p>
+
+	<p>Minha idade é {{idade}}</p>
+
+</body>
+</html>
